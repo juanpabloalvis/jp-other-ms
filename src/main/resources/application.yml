@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: jp-other-ms
+
+server:
+  port: 8086
