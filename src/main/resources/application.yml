@@ -5,7 +5,13 @@ spring:
 server:
   port: 8086
 
+logging.pattern.level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
 management:
+  tracing:
+    sampling:
+      #      used for tracing
+      probability: 1.0
   endpoints:
     web:
       exposure:
